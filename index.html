@@ -21,14 +21,14 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             
             --text-color: rgba(0, 0, 0, 0.8); 
-            --base: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.55));
+            --base: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6));
             --elevate: rgba(255, 255, 255, 0.4);
             --elevate-hover: rgba(255, 255, 255, 0.6);
             --elevate-active: rgba(190, 190, 190, 0.4);
             --highlight-color: rgba(0, 0, 0, 0.8);
 
             --overlay: rgba(255, 255, 255, 0.4);
-            --overlay-filter: blur(8px);
+            --backdrop-blur: blur(10px) saturate(120%);
 
             --min-target-size: 36px;
 
@@ -38,7 +38,7 @@
         html.dark-theme {
             color-scheme: dark;
             --text-color: rgba(255, 255, 255, 0.9);
-            --base: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.55));
+            --base: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
             --elevate: rgba(255, 255, 255, 0.1);
             --elevate-hover: rgba(255, 255, 255, 0.2);
             --elevate-active: rgba(255, 255, 255, 0.4);
@@ -73,6 +73,7 @@
             border-radius: 1rem;
 
             background: var(--base);
+            backdrop-filter: var(--backdrop-blur);
             box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgb(0, 0, 0, 0.15);
             max-height: calc(100dvh - (1rem + var(--min-target-size)));
             overflow-y: auto;
@@ -131,7 +132,7 @@
 
         .floating-action {
             background: var(--overlay);
-            backdrop-filter: var(--overlay-filter);
+            backdrop-filter: var(--backdrop-blur);
             width: var(--min-target-size);
             height: var(--min-target-size);
             box-shadow: 0px 1px 2px 0px rgb(0, 0, 0, 0.3), 0px 1px 3px 1px rgb(0, 0, 0, 0.15);
