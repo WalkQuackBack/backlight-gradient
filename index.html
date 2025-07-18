@@ -360,6 +360,7 @@
                 gradientStopsContainer.appendChild(stopElement);
             });
             updateBackground();
+            gradientStopsContainer.scrollTop = gradientStopsContainer.scrollHeight;
         }
 
         function handleKeyboardMove(currentIndex, key) {
