@@ -55,8 +55,8 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 100%;
-            width: 100%;
+            height: 100dvw;
+            width: 100dvh;
             overflow: hidden;
             color: var(--text-color);
         }
@@ -74,7 +74,7 @@
 
             background: var(--base);
             box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgb(0, 0, 0, 0.15);
-            max-height: calc(100% - 1rem);
+            max-height: calc(100dvh - (1rem + var(--min-target-size)));
             overflow-y: auto;
             transition: transform cubic-bezier(0.38, 1.21, 0.22, 1.00) 500ms;
         }
