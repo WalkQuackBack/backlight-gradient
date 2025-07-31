@@ -37,7 +37,7 @@
 
         html.dark-theme {
             color-scheme: dark;
-            --text-color: rgba(255, 255, 255, 0.9);
+            --text-color: rgba(255, 255, 255, 0.85);
             --base: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
             --elevate: rgba(255, 255, 255, 0.1);
             --elevate-hover: rgba(255, 255, 255, 0.2);
@@ -115,6 +115,7 @@
             justify-content: center;
             align-items: center;
             --focus-ring-offset: 2px;
+            transition: scale cubic-bezier(0.34, 0.80, 0.34, 1.00) 200ms;
         }
 
         input[type="text"], select {
@@ -131,11 +132,11 @@
         }
 
         .floating-action {
+            opacity: 0.5;
             background: var(--overlay);
             backdrop-filter: var(--backdrop-blur);
             width: var(--min-target-size);
             height: var(--min-target-size);
-            box-shadow: 0px 1px 2px 0px rgb(0, 0, 0, 0.3), 0px 1px 3px 1px rgb(0, 0, 0, 0.15);
             z-index: 5;
             border-radius: 50%;
             padding: 0;
@@ -143,6 +144,7 @@
 
         @media (hover: hover) {
             .floating-action:hover {
+                opacity: 1;
                 box-shadow: 0px 2px 3px 0px rgb(0, 0, 0, 0.3), 0px 2px 4px 0px rgb(0, 0, 0, 0.15);
             }
     
@@ -153,6 +155,7 @@
 
         button:active {
             background: var(--elevate-active);
+            scale: 0.95;
         }
 
         #fullscreen {
