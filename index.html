@@ -28,6 +28,7 @@
             --elevate-hover: hsl(0 0 90 / 40%);
             --elevate-active: hsl(0 0 80 / 40%);
             --highlight-color: hsl(0 0 0 / 80%);
+            --outline: hsl(0 0 50 / 50%);
 
             --inverse: hsl(0 0 0 / 100%);
             --inverse-hover: hsl(0 0 10 / 100%);
@@ -155,6 +156,7 @@
 
         .floating-action {
             background: var(--overlay);
+            border: 1px solid var(--outline);
             backdrop-filter: var(--backdrop-blur);
             width: var(--min-target-size);
             height: var(--min-target-size);
