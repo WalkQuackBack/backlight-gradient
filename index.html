@@ -29,6 +29,11 @@
             --elevate-active: hsl(0 0 80 / 40%);
             --highlight-color: hsl(0 0 0 / 80%);
 
+            --inverse: hsl(0 0 0 / 100%);
+            --inverse-hover: hsl(0 0 10 / 100%);
+            --inverse-active: hsl(0 0 20 / 100%);
+            --on-inverse: hsl(0 0 100 / 100%);
+
             --overlay: hsl(0 0 100 / 40%);
             --backdrop-blur: saturate(180%) blur(16px);
 
@@ -45,6 +50,11 @@
             --elevate-hover: hsl(0 0 100 / 30%);
             --elevate-active: hsl(0 0 100 / 40%);
             --highlight-color: hsla(0 0 100 / 80%);
+
+            --inverse: hsl(0 0 100 / 100%);
+            --inverse-hover: hsl(0 0 90 / 100%);
+            --inverse-active: hsl(0 0 80 / 100%);
+            --on-inverse: hsl(0 0 0 / 100%);
         }
 
         @media (pointer: coarse) {
@@ -91,6 +101,15 @@
             left: 0.5rem;
         }
 
+        #addStopBtn {
+            background-color: var(--inverse);
+            color: var(--on-inverse);
+        }
+
+        #addStopBtn:active {
+            background-color: var(--inverse-active);
+        }
+
         .group {
             display: flex;
             flex-direction: column;
@@ -133,7 +152,6 @@
         }
 
         .floating-action {
-            opacity: 0.5;
             background: var(--overlay);
             backdrop-filter: var(--backdrop-blur);
             width: var(--min-target-size);
@@ -152,17 +170,15 @@
             button:hover {
                 background: var(--elevate-hover);
             }
+
+            #addStopBtn:hover {
+                background-color: var(--inverse-hover);
+            }
         }
 
         button:active {
             background: var(--elevate-active);
-            scale: 0.95;
-        }
-
-        #fullscreen {
-            position: fixed;
-            top: .5rem;
-            right: .5rem;
+            scale: 0.9;
         }
 
         .gradient-stops-container {
@@ -209,12 +225,14 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
         </svg>
     </button>
-    <button id="fullscreen" class="floating-action" aria-label="Fullscreen">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-        </svg>
-    </button>
     <aside class="tools" id="toolsPanel">
+        <button id="fullscreen">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+            </svg>
+            Fullscreen
+        </button>
+        
         <section class="group">
             <label for="angle">Angle</label>
             <input type="text" name="angle" id="angle" value="90deg">
