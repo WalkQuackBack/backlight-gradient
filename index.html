@@ -434,12 +434,6 @@
             gradientStops.push({ color: '#808080', position: newPosition });
             gradientStops.sort((a, b) => a.position - b.position);
             renderGradientStops();
-
-            const newStopIndex = gradientStops.length - 1;
-            const newStopElement = gradientStopsContainer.querySelector(`[data-index="${newStopIndex}"]`);
-            if (newStopElement) {
-                newStopElement.querySelector('.drag-handle').focus();
-            }
         }
 
         function removeGradientStop(index) {
