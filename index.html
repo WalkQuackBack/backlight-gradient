@@ -89,10 +89,12 @@
 
             background: var(--base);
             backdrop-filter: var(--backdrop-blur);
-            box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgb(0, 0, 0, 0.15);
             max-height: min(calc(100dvh - (1rem + .5rem + var(--min-target-size))), 720px);
             overflow-y: auto;
             transition: transform cubic-bezier(0.38, 1.21, 0.22, 1.00) 500ms;
+            box-shadow:
+                0 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgb(0, 0, 0, 0.15),
+                inset 0 1px 2px hsl(0 0 100 / 20%), inset 0 -2px 5px hsl(0 0 0 / 10%);
         }
 
         .tools.collapsed {
