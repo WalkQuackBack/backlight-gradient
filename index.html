@@ -80,7 +80,7 @@
             display: flex;
             flex-direction: column;
             position: fixed;
-            bottom: calc(1rem + var(--min-target-size));
+            bottom: calc(env(safe-area-inset-bottom) + 1rem + var(--min-target-size));
             left: calc(env(safe-area-inset-left) + .5rem);
             gap: .5rem;
             padding: .5rem;
