@@ -80,8 +80,8 @@
             display: flex;
             flex-direction: column;
             position: fixed;
-            bottom: calc(1rem + var(--min-target-size));
-            left: .5rem; 
+            bottom: calc(env(safe-area-inset-bottom) + 1rem + var(--min-target-size));
+            left: calc(env(safe-area-inset-left) + .5rem);
             gap: .5rem;
             padding: .5rem;
 
@@ -89,7 +89,7 @@
 
             background: var(--base);
             backdrop-filter: var(--backdrop-blur);
-            max-height: min(calc(100dvh - (1rem + .5rem + var(--min-target-size))), 720px);
+            max-height: min(calc(100dvh - env(safe-area-inset-top) - (1rem + .5rem + var(--min-target-size))), 720px);
             overflow-y: auto;
             transition: transform cubic-bezier(0.38, 1.21, 0.22, 1.00) 500ms;
             box-shadow:
