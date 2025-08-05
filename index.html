@@ -23,7 +23,7 @@
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             
             --text-color: hsl(0 0 0 / 80%); 
-            --base: linear-gradient(180deg, hsl(0 0 100 / 80%), hsl(0 0 90 / 60%));
+            --base: linear-gradient(180deg, hsl(0 0 100 / 80%), hsl(0 0 80 / 60%));
             --elevate: hsl(0 0 100 / 40%);
             --elevate-hover: hsl(0 0 90 / 40%);
             --elevate-active: hsl(0 0 80 / 40%);
@@ -36,7 +36,7 @@
             --on-inverse: hsl(0 0 100 / 100%);
 
             --overlay: hsl(0 0 90 / 60%);
-            --backdrop-blur: saturate(320%) blur(8px);
+            --backdrop-blur: brightness(0.9) saturate(300%) blur(8px);
 
             --min-target-size: 36px;
 
@@ -46,7 +46,7 @@
         html.dark-theme {
             color-scheme: dark;
             --text-color: hsl(0 0 100 / 80%); 
-            --base: linear-gradient(180deg, hsl(0 0 10 / 80%), hsl(0 0 10 / 60%));
+            --base: linear-gradient(180deg, hsl(0 0 20 / 70%), hsl(0 0 10 / 50%));
             --elevate: hsl(0 0 100 / 20%);
             --elevate-hover: hsl(0 0 100 / 30%);
             --elevate-active: hsl(0 0 100 / 40%);
@@ -98,7 +98,7 @@
             transition: transform cubic-bezier(0.38, 1.21, 0.22, 1.00) 500ms;
             box-shadow:
                 0 2px 3px 0px rgba(0, 0, 0, 0.3), 0px 4px 8px 3px rgb(0, 0, 0, 0.15),
-                inset 0 1px 2px hsl(0 0 100 / 20%), inset 0 -2px 5px hsl(0 0 0 / 10%);
+                inset 0 1px 2px 1px hsl(0 0 100 / 20%), inset 0 -2px 6px 1px hsl(0 0 0 / 10%);
         }
 
         .tools.collapsed {
