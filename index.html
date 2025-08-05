@@ -80,7 +80,7 @@
             display: flex;
             flex-direction: column;
             position: fixed;
-            bottom: calc(env(safe-area-inset-bottom) + 1rem + var(--min-target-size));
+            bottom: calc(1rem + var(--min-target-size));
             left: calc(env(safe-area-inset-left) + .5rem);
             gap: .5rem;
             padding: .5rem;
@@ -98,13 +98,13 @@
         }
 
         .tools.collapsed {
-            transform: translateX(calc(-100% - 0.5rem));
+            transform: translateX(calc(-100% - 0.5rem - env(safe-area-inset-left)));
         }
 
         #togglePanelBtn {
             position: fixed;
-            bottom: 0.5rem;
-            left: 0.5rem;
+            bottom: calc(0.5rem + env(safe-area-inset-bottom));
+            left: calc(0.5rem + env(safe-area-inset-left));
         }
 
         #addStopBtn {
